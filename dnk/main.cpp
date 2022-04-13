@@ -49,11 +49,10 @@ int generator() {
 
 std::string generate_str(int l) {
 	std::string s(l, '4');
-	std::generate(s.begin(), s.end(), generator);
-	std::replace(s.begin(), s.end(), '0', 'A');
-	std::replace(s.begin(), s.end(), '1', 'G');
-	std::replace(s.begin(), s.end(), '2', 'T');
-	std::replace(s.begin(), s.end(), '3', 'C');
+	std:: string samples = "AGTC";
+	for (size_t i = 0; i<1; i++){
+	s[i] = samples[generator()];
+	}
 	return s;
 }
 
